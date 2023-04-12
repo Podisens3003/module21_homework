@@ -5,6 +5,7 @@ const list = document.querySelector('ol');
 form.onsubmit = (e) => {
     e.preventDefault();
     getTodosList();
+    list.innerHTML = null;
 }
 
 const getTodosList = () => {

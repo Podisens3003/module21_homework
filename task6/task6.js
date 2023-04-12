@@ -24,8 +24,8 @@ button.addEventListener('click', event => {
 function checkFormValue() {
     const checkFirst = checkInputValue(page);
     const checkSecond = checkInputValue(limit);
-
-    if (checkFirst && checkSecond) {
+    
+     if (checkFirst && checkSecond) {
         formValidator.innerText = 'Номер страницы и лимит вне диапазона от 1 до 10';
     } else if (checkFirst) {
         formValidator.innerText = 'Номер страницы вне диапазона от 1 до 10';
@@ -38,7 +38,7 @@ function checkFormValue() {
 }
 
 function checkInputValue(input) {
-    !Number.isNaN(+input.value) && (input.value < 1 || input.value > 10);
+    return !Number.isNaN(+input.value) && (input.value < 1 || input.value > 10);
 }
 
 function getPictures(page, limit) {
